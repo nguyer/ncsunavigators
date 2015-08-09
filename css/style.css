@@ -1,0 +1,128 @@
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+}
+
+.logo {
+	position: relative;
+	width: 600px;
+	max-width: 90%;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	z-index: 5;
+}
+
+.section {
+	padding: 50px;
+	position: relative;
+	width: 100vw;
+	box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+}
+
+#title {
+	background: 50% 50% / cover;
+	background-image: url("../img/IMG_3413c.jpg");
+	text-align: center;
+	margin-bottom: -200px;
+	width: 100%;
+	height: 100vh;
+	max-height: 100vw;
+	z-index: 0;
+}
+
+#slogan {
+	color: #fff;
+	background-color: #c00;
+	padding: 0.5em;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+	z-index: 20;
+	font-family: 'IM Fell English SC', serif;
+}
+
+#mission {
+	z-index: 0;
+	color: #eee;
+	background-color: #333;
+	padding: 30px 50px 50px 50px;
+}
+
+.circle-container {
+	margin: 50px 0 50px 0;
+}
+
+.circle-icon {
+	width: 80%;
+	max-width: 150px;
+	border: 4px solid #fff;
+}
+
+.round {
+	border-radius: 100%;
+}
+
+#meetings {
+	background-color: #c00;
+	color: #fff;
+	z-index: 10;
+}
+
+#meetings .row {
+	margin-bottom: 1.5em;
+}
+
+#meetings .row:last-of-type {
+	margin-bottom: 0;
+}
+
+#meetings h1 {
+	margin-top: 0;
+}
+
+#staff {
+	background-color: #fff;
+}
+
+#staff img {
+	box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+	max-width: 200px;
+}
+
+#staff .profile-pic {
+	text-align: right;
+}
+
+@media only screen and (max-width : 768px) {
+	#staff .profile-pic {
+		text-align: center;
+	}
+
+	.xs-left {
+		text-align: left;
+	}
+}
+
+#contact {
+	z-index: 0;
+	color: #eee;
+	background-color: #333;
+	z-index: 10;
+}
+
+#contact a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#contact a:hover {
+	text-decoration: underline;
+}
+
+#copyright {
+	color: #fff;
+	background-color: #222;
+}
+
+.tiny {
+	font-size: 0.6em;
+}
