@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body, html {
+			padding: 0;
+			margin: 0;
+			background-color: #000;
+			color: #fff;
+			font-family: Abel;
+			height: 100%;
+		}
+
+		#wrapper {
+			width: 100%;
+		}
+
+		.winnerName {
+			position: absolute;
+			font-size: 4em;
+			font-weight: lighter;
+			text-align: center;
+			top: calc(50vh - 1em);
+			width: 100%;
+		}
+
+	</style>
+	<title>Navs Drawing</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="winnerName"></div>
+	</div>
+	<!-- Don't need jQuery for Tabletop, but using it for this example -->
+	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/tabletop.js"></script>
+	<script type="text/javascript">
+		var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1a9jUe9rEQt2Bolzpln0YR_vUfJ5GQOciA_PkvBUy09Y/pubhtml';
+
+		$(document).ready( function() {
+			Tabletop.init( { key: public_spreadsheet_url,
+			callback: getWinners,
+			wanted: [ "Form Responses 1" ],
+			debug: true } )
+		})
+
+		function getWinners(data, tabletop) {
+			$('body').click(function () {
+				var rows = tabletop.sheets("Form Responses 1").all();
+				var winnerNumber = Math.floor(Math.random() * rows.length);
+				$(".winnerName").empty();
+				$(".winnerName").append(rows[winnerNumber].Name);
+			});
+		}
+		</script>
+	</body>
+</html>
